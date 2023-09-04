@@ -218,17 +218,6 @@ CONF_IN( UMFPACK_INFO )
 };
 
 %include <umfpack.h>
-%include <umfpack_solve.h>
-%include <umfpack_defaults.h>
-%include <umfpack_triplet_to_col.h>
-%include <umfpack_col_to_triplet.h>
-%include <umfpack_transpose.h>
-%include <umfpack_scale.h>
-
-%include <umfpack_report_symbolic.h>
-%include <umfpack_report_numeric.h>
-%include <umfpack_report_info.h>
-%include <umfpack_report_control.h>
 
 /*
   The order is important below!
@@ -326,6 +315,5 @@ ARRAY_IN( SuiteSparse_long, SuiteSparse_long, INT64 )
 };
 %apply long *OUTPUT { SuiteSparse_long *do_recip};
 
-%include <umfpack_get_numeric.h>
 
 #endif
