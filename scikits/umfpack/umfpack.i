@@ -229,20 +229,12 @@ OPAQUE_ARGOUT( void * )
     void **Numeric
 }
 
-%include <umfpack_symbolic.h>
-%include <umfpack_numeric.h>
-
 
 OPAQUE_ARGINOUT( void * )
 %apply  void ** opaque_arginout {
     void **Symbolic,
     void **Numeric
 }
-
-%include <umfpack_free_symbolic.h>
-%include <umfpack_free_numeric.h>
-
-
 
 /*
  * wnbell - attempt to get L,U,P,Q out
@@ -269,7 +261,7 @@ OPAQUE_ARGINOUT( void * )
     SuiteSparse_long *n_col,
     SuiteSparse_long *nz_udiag
 };
-%include <umfpack_get_lunz.h>
+
 
 ARRAY_IN( double, double, DOUBLE )
 %apply double *array {
